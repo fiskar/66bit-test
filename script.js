@@ -9,9 +9,8 @@ function addWidget() {
 	let widget = document.createElement('div');
 
 	widget.className = `widget-${i}`;
-	widget.innerHTML = `${i}`;
-	
-	document.body.append(widget);
+	widget.insertAdjacentHTML('beforeend', `<input type="button" value="del" onclick="removeWidget();">`);	
+	dashboard.append(widget);
 }
 
 function removeWidget() {
