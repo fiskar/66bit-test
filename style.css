@@ -1,0 +1,47 @@
+
+.addWidget {
+	background: url(buttons.png);
+	width: 28px;
+	height: 28px;
+	background-position: -437px -152px;
+}
+
+.delWidget {
+	background: url(buttons.png);
+	width: 28px;
+	height: 28px;
+	background-position: -363px -152px;
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: repeat(5, 121px);
+	grid-template-columns: repeat(13, 1fr);
+	grid-gap: 15px;
+	grid-auto-flow: dense;
+}
+
+.grid__item:nth-child(1) {
+	grid-row-end: span 2;
+	grid-column-end: span 3;
+}
+
+.grid__item:nth-child(2n+1) {
+	grid-row-end: span 3;
+	grid-column-end: span 2;
+}
+
+.grid__item:nth-child(3n+1) {
+	grid-row-end: span 2;
+	grid-column-end: span 2;
+}
+
+.grid__item:nth-child(4) {
+	grid-row-end: span 1;
+	grid-column-end: span 1;
+}
+
+.grid__item:nth-child(5) {
+	grid-row-end: span 2;
+	grid-column-end: span 1;
+}

@@ -10,13 +10,12 @@ function addWidget() {
 	
 	let widget = document.createElement('div');
 
-	widget.className = `widget-${i}`;
-	widget.insertAdjacentHTML('beforeend', `<input type="button" title="Удалить виджет" value="del" onclick="removeWidget();">`);	
+	widget.className = `widget-${i} grid__item`;
+	widget.insertAdjacentHTML('beforeend', `<input type="button" class="delWidget" title="Удалить виджет" value="" onclick="removeWidget();">`);	
 
 	dashboard.append(widget);
 	};
 
 function removeWidget() {
-	document.getElementsByClassName(`widget-${i}`);
 	$(`.widget-${i}`).remove();
 }

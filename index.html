@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Text_page4©66 Бит</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Text_page4©66 Бит</title>
+<link rel="stylesheet" href="style.css">
+<style>
+	.grid__item {
+	display: flex;
+	border: 2px solid #ccc;
+	margin: 1px;
+	justify-content: right;
+	}
+
+	.grid__item:nth-child(3n+1) {
+		background-color: #96ceb4;
+	}
+
+	.grid__item:nth-child(3n+2) {
+		background-color: #ff66ff;
+	}
+
+	.grid__item:nth-child(3n) {
+		background-color: #003399;
+	}
+
+	.grid__item:nth-child(4n+7) {
+		background-color: #ff6633;
+	}
+
+	.grid__item:nth-child(5n) {
+		background-color: #66cccc;
+</style>
 </head>
 <body>
-	<div id="dashboard">
-	<input type="button" title='Добавить виджет' value="add" onclick="addWidget();">
+	<div id="dashboard" class="grid">
+	<input type="button" class="addWidget" title='Добавить виджет' value="" onclick="addWidget();">
 	</div>
 	<script src="script.js"></script>
 	<script src="jquery.js"></script>
