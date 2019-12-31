@@ -1,3 +1,4 @@
+'use strict'
 function Generator() {};
 Generator.prototype.rand = 1;
 Generator.prototype.getId = function() {
@@ -6,7 +7,7 @@ Generator.prototype.getId = function() {
 let idGen = new Generator();
 
 function addWidget() {
-	i = (idGen.getId());
+	let i = idGen.getId();
 	
 	let widget = document.createElement('div');
 
@@ -17,5 +18,5 @@ function addWidget() {
 	};
 
 function removeWidget() {
-	$(`.widget-${i}`).remove();
+	$('.grid__item:last-child').remove();
 }
